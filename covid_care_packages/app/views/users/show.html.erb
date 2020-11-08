@@ -1,0 +1,23 @@
+<h1>Welcome, <%=@user.name%>!</h1>
+
+<div>
+Username: <%= @user.username %>
+<br>
+Email: <%= @user.email %>
+</div>
+<br>
+
+<div>
+<%= link_to "Start a new care pacakge", new_package_path %>
+<br>
+<%= link_to "See old orders"%>
+<br>
+<%= mail_to "fakesupport@gmail.com", "Contact Support"%>
+<br>
+<%= link_to "Add more items to cart", items_path%>
+</div>
+
+<div>
+<%= button_to "Delete Account", @user, method: "delete", data: {confirm: "Are you sure? This cannot be reversed!"} %>
+
+</div>
