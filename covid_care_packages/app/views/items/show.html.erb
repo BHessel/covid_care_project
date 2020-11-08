@@ -1,0 +1,9 @@
+<h1><%= @item.name %></h1>
+
+<h4>Price:</h4> <%= number_to_currency(@item.price) %>
+<h4>Description:</h4> <%= @item.description %>
+
+<div><br>
+<%= link_to "Add to Cart", items_path%>
+<!-- THIS ONLY LINKS TO INDEX RIGHT NOW -- Have to set up the cart --> 
+</div>

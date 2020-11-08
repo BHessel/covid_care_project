@@ -1,0 +1,11 @@
+<h1>Care Package Items</h1>
+
+<h5>Custome your gift by selecting any five of the items below:</h5>
+
+<div>
+    <ul>
+        <% @items.each do |item| %>
+        <li> <%= link_to item.name, item_path(item) %> </li>
+        <% end %>
+    </ul>
+</div>
