@@ -1,0 +1,11 @@
+<h1>Login</h1>
+
+<% if flash.now[:error_message] %>
+   <div><%= flash.now[:error_message]%></div>
+<%end%>
+<%= form_tag do %>
+    <%= label :username, "Username"%>
+    <%= text_field_tag :username %>
+    <%= submit_tag "Login" %>
+<% end %>
+<%= link_to "First Time? Register here", new_user_path %>
