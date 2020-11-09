@@ -22,8 +22,10 @@ end
 
 item_arr = ['Masks', 'Bottle of Wine', 'Box of Tissues', 'Monopoly', 'Insomnia Cookies', 'Hand Sanitzer', 'Disinfectant Wipes', 'iPhone Charger', 'Flowers', 'Candles', 'Bath Bomb', 'Picture Frame', 'Coloring Book', 'Snuggie', 'Gloves', 'AirPods', 'Dog Treats', 'Manicure Set', 'Puzzle', '$10 Visa Giftcard', 'Slippers']
 
+
+
 20.times do
-    Item.create(name: item_arr.sample, 
+    Item.create(name: item_arr.pop,
                 price: rand(5.00..200.00).round(2),   
                 description: Faker::Lorem.sentence(word_count: 8))
 end
