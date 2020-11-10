@@ -6,6 +6,8 @@ Rails.application.routes.draw do
   get "/login", to: "sessions#login"
   post "/login", to: "sessions#process_login"
   # resources :package_items
+
+  get "/packages/add_items", to: "packages#add_items"
   
   resources :packages
   resources :items, only: [:show, :index]

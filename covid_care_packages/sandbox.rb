@@ -38,3 +38,18 @@ This can be our SKATEBOARD, add_to_cart etc. can be our scooter?
 
 <% @items.each do |item| %>
 <%= check_box_tag item.name %>
+
+
+
+
+
+<ul>
+        <% @items.each do |item| %>
+        <%=form_for item do |f| %> 
+            <%= f.label :name, item.name %>
+            <%= f.check_box :name %>
+
+
+        <% end %>
+        <% end %>
+    </ul>
