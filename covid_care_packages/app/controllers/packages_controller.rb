@@ -3,6 +3,7 @@ class PackagesController < ApplicationController
 
     def new
         @package = Package.new
+        @items = Item.all
     end
 
     def create
