@@ -1,0 +1,28 @@
+<h1> Build Your Covid Care Package </h1>
+
+<h3> Who are we sending this gift to? </h3>
+
+<div class = "recipient info">
+<%= form_tag do %>
+<div id = recipient_info>
+<%= label_tag :recipient_name, "Recipient Name" %>
+<%= text_field_tag :recipient_name %>
+
+<%= label_tag :recipient_address, "Recipient Address" %>
+<%= text_area_tag :recipient_name %>
+
+<%= label_tag :recipient_message, "Leave a note for your friend" %>
+<%= text_area_tag :recipient_message %>
+
+<% end %>
+</div>
+
+<!--
+<div>
+    <ul>
+        <% @items.each do |item| %>
+        <li> <%= link_to item.name, item_path(item) %> </li>
+        <% end %>
+    </ul>
+</div>
+-->
