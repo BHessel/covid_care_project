@@ -5,8 +5,9 @@
     <%=form_for item do |f| %> 
         <%= f.label :name, item.name %>
         <%= f.check_box :name %>
-        <%= f.submit "Add Items", packages_add_items_path %>
-
+        <% end %>
     <% end %>
-    <% end %>
+    <div>
+        <button><%= link_to "Checkout", packages_add_items_path %></button>
+    </div>
 </ul>
