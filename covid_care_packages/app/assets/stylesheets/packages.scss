@@ -22,3 +22,13 @@ ul {
 .linktohome{
     padding: 20px;
 }
+
+#recipient_info{
+    display: grid;
+    justify-content: center;
+}
+
+.checkbox-list{
+    display: inline-block;
+    width: 15%;
+  }
