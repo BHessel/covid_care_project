@@ -1,7 +1,28 @@
 <h1>Congrats!</h1>
 
+<p>Thanks to our generous donor - Matteo Ricci - you can put your credit card away as we prepare your Covid Care Package to be shipped.</p>
+<br>
 <h2>You sent your package to:</h2>
 
-<!--- confirm reciepients info --->
-<!--- confirm items--->
+<div class = recipient-info>
+<!--- receipient name -->
+<%= @package.recipient_name %> at
+<!--- receipient address -->
+<%= @package.recipient_address %>
+<!--- receipient message -->
+</div>
 
+<p class = "msg">Your Message to <%="#{@package.recipient_name}"%>:</p>
+<%= @package.recipient_message %>
+
+<h4 class = "packageitems">Which will include:</h4>
+<!--- confirm items--->
+<% @package.items.each do |item| %>
+    <ul>
+        <li><%= item.name %></li>
+    </ul>
+<% end %>
+
+<div class = "linktohome">
+    <%= link_to "Return to Account Home", user_path(@package.user)%>
+</div>

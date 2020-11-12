@@ -7,13 +7,19 @@ class PackagesController < ApplicationController
     
     def create
         @user = User.find(session[:user_id])
-        @package = Package.create(recipient_name: params[:recipient_name],
-                                    recipient_address: params[:recipient_address],
-                                    recipient_message: params[:recipient_message],
+        @package = Package.create(recipient_name: params[:package][:recipient_name],
+                                    recipient_address: params[:package][:recipient_address],
+                                    recipient_message: params[:package][:recipient_message],
                                     user_id: @user.id
                                     )
+        params[:package][:item_ids].map do |item_id|
+            if item_id != ""
+            item = Item.find(item_id)
+            @package.items << item
+            end
+        end
+
         redirect_to package_path(@package.id)
-        #redirect_to page where they fill out info in package path(#argument of package)
     end
     
     
