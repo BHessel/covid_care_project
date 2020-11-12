@@ -1,5 +1,7 @@
-<h1>Login</h1>
 
+<h1 class= "header">Login</h1>
+
+<div class= "form">
 <% if flash.now[:error_message] %>
    <div><%= flash.now[:error_message]%></div>
 <%end%>
@@ -12,4 +14,8 @@
 
     <%= submit_tag "Login" %>
 <% end %>
+<p class= "message">
 <%= link_to "New? Register here", new_user_path %>
+</p>
+</form>
+</div>

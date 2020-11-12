@@ -25,7 +25,7 @@ item_arr = ['Masks', 'Bottle of Wine', 'Box of Tissues', 'Monopoly', 'Insomnia C
 
 
 20.times do
-    Item.create(name: item_arr.pop,
+    Item.create(name: item_arr.shuffle!.pop,
                 price: rand(5.00..200.00).round(2),   
                 description: Faker::Lorem.sentence(word_count: 8))
 end
