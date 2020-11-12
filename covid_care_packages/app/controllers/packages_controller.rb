@@ -26,6 +26,7 @@ class PackagesController < ApplicationController
     
     def add_items
         byebug
+    
     end
 
 

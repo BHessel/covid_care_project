@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   
   get "/", to: "application#home", as: "home"
   get "/about", to: "application#about"
+  get "/confirmation", to: "application#confirmation"
 
   get "/login", to: "sessions#login"
   post "/login", to: "sessions#process_login"
