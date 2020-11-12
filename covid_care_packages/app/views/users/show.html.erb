@@ -11,11 +11,11 @@ Email: <%= @user.email %>
 <%= link_to "Start a new care pacakge", new_package_path %>
 <!-- needs to route to a NEW package, then reroute to items -->
 <br>
-<%= link_to "See old orders"%>
+<%= link_to "See All In-Stock Items", items_path%>
 <br>
 <%= mail_to "fakesupport@gmail.com", "Contact Support"%>
 <br>
-<%= link_to "Add more items to cart", items_path%>
+<!--<%= link_to "See old orders"%> -->
 </div>
 
 <div>
