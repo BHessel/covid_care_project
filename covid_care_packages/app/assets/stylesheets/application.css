@@ -54,7 +54,7 @@ nav{
   padding: 20px;
 }
 
-#home-img{
+img.rounded-corners{
   display: block;
   margin-left: auto;
   margin-right: auto;
