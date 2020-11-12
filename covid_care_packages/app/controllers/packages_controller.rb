@@ -25,7 +25,8 @@ class PackagesController < ApplicationController
     
     
     def add_items
-        byebug
+       #find the items that are checked
+       #store the 
     
     end
 
