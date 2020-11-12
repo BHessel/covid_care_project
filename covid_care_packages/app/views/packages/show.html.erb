@@ -1,12 +1,7 @@
-<h1>Add Your Items</h1>
+<h1>Congrats!</h1>
 
-<ul>
-    <%=form_for @package do |f| %> 
-    <%byebug%>
-        <%= f.collection_check_boxes(:item_ids, Item.all, :id, :name)%>
-        <%= f.submit "Submit Package"%>
-    <% end %>
-    <%# <div>
-        <button><%= link_to "Checkout", packages_add_items_path %></button>
-    
-</ul>
+<h2>You sent your package to:</h2>
+
+<!--- confirm reciepients info --->
+<!--- confirm items--->
+
