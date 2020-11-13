@@ -19,5 +19,7 @@
 <div class="checkbox-list" >
     <%= f.collection_check_boxes(:item_ids, Item.all, :id, :name)%>
 </div>
+<div id="package-submit">
     <%= f.submit "Submit Package" %>
+</div>
 <% end %>
