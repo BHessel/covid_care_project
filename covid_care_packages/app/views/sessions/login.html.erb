@@ -2,7 +2,7 @@
 <h1 class= "header">Login</h1>
 
 <%if logged_in? %>
-<% flash.now[:error_message]= "Already logged in. Click here to go to home page" %>
+<% flash.now[:error_message]= link_to "Already logged in. Click here to go to home page", user_path(session[:user_id]) %>
 <%end%>
 
 <div class= "form">
