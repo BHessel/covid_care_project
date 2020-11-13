@@ -22,6 +22,9 @@
 }
 
 nav{
+  position: fixed;
+  top: 0;
+  width: 100%;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -64,6 +67,7 @@ img.rounded-corners{
 }
 
 body {
+  padding-top: 7%;
     background-color: #FFF8DC;
     color: rgb(3, 155, 147);
     text-align: center;
@@ -72,7 +76,7 @@ body {
 
 
 footer {
-  position: fixed;
+  position: static;
   bottom: 0;
   width: 100%;
   height: 50px;
