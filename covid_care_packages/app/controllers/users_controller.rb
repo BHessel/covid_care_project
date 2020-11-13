@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-
+    
     def show
         find_user
     end

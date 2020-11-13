@@ -14,12 +14,17 @@
     <nav>
       <div class="logo">
         <h4><%= link_to "Covid Care Packages", home_path%></h4>
+        <%if logged_in? %>
+          <h4><%= "Welcome, #{current_user.name}" %><h4>
+          <% end %>
       </div>
         <ul class="nav-links">
           <li><%=link_to "Items", items_path %></li>
           <li><%=link_to "About Us", about_path %></li>
-          <li><%=link_to "Login", login_path %></li>
           <li><%=link_to "Get Started", new_user_path %></li>
+          <li><%=link_to "Login", login_path %></li>
+          <li><%=link_to "Logout", logout_path %></li>
+
         </ul>
     </nav>
     

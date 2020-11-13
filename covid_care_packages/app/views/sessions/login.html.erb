@@ -1,6 +1,10 @@
 
 <h1 class= "header">Login</h1>
 
+<%if logged_in? %>
+<% flash.now[:error_message]= "Already logged in. Click here to go to home page" %>
+<%end%>
+
 <div class= "form">
 <% if flash.now[:error_message] %>
    <div><%= flash.now[:error_message]%></div>

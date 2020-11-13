@@ -1,20 +1,26 @@
 class ApplicationController < ActionController::Base
 
-    helper_method :current_cart
-
+    helper_method :logged_in?
+    helper_method :current_user
+    
     def home
     end
-
+    
     def about
     end
     
-    def current_cart
-        session[:cart] ||= []
+    
+    def logged_in?
+    
+        !!session[:user_id]
+            
     end
 
-    def confirmation
+
+
+    def current_user
+        @current_user= User.find(session[:user_id])
     end
-    
     
 
 end

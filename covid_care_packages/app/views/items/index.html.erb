@@ -10,6 +10,11 @@
     </ul>
 </div>
 
+
 <div>
-    <%= link_to "Return to Account Home"%>
+<% if logged_in? %>
+   <%= link_to "Return to Account Home", user_path(session[:user_id]) %>
+   <% else %>
+   <%= link_to "Login", login_path %>
+   <%end%>
 </div>
